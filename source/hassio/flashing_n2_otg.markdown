@@ -25,7 +25,7 @@ Next, locate the toggle for boot mode and switch it from MMC to SPI.
 
 ![Photo of the SPI toggle switch](/images/hassio/screenshots/toggle_spi.jpg)
 
-Connect a USB keyboard and HDMI connected monitor to your ODROID-N2+, and then connect power.
+Connect a USB keyboard and HDMI connected monitor to your ODROID-N2+, connect the ODROID-N2+ to your computer using USB 2.0 to micro-USB cable and then connect power to the ODROID N2+.
 
 ### Enabling USB drive mode
 
@@ -48,7 +48,9 @@ ums /dev/mmcblk0
 
 ### Flashing Home Assistant
 
-Connect the ODROID-N2+ to your PC via the micro-USB port at the front of the ODROID-N2+. When the ODROID-N2 is recognized as a USB connected storage device, you can flash the eMMC with [Etcher](https://www.balena.io/etcher/) using the latest stable version of Home Assistant OS for the [ODROID-N2+](https://github.com/home-assistant/operating-system/releases/latest) (hassos_odroid-n2-XXXX.img.gz).
+You can flash the eMMC with [Etcher](https://www.balena.io/etcher/) using the latest stable version of Home Assistant OS for the [ODROID-N2+](https://github.com/home-assistant/operating-system/releases/latest) (hassos_odroid-n2-XXXX.img.gz).
+
+On Windows, if you have UAC enabled, you should ideally run Etcher as admin. Otherwise you will be prompted by UAC to approve the admin of a process which may cause Etcher to hang.
 
 When the flash process is complete, disconnect the ODROID-N2+ from your PC and remove the power cable. Remove the USB and HDMI cable, and make sure to toggle the boot mode switch back to MMC.
 
